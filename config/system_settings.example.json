@@ -1,0 +1,192 @@
+{
+  "_comment": "系统设置配置文件 - 请复制为 system_settings.json 并根据需要调整",
+  
+  "aiConfig": {
+    "baseUrl": "https://api.example-ai-provider.com/v1",
+    "model": "gpt-3.5-turbo",
+    "temperature": 0.7,
+    "maxTokens": 2000,
+    "timeout": 30000,
+    "retryAttempts": 3,
+    "supportedProviders": [
+      "openai",
+      "deepseek",
+      "qwen",
+      "claude",
+      "gemini",
+      "baidu",
+      "custom"
+    ]
+  },
+  
+  "searchConfig": {
+    "maxResults": 100,
+    "defaultResultsPerPage": 20,
+    "enableSemanticScholar": true,
+    "enableGoogleScholar": true,
+    "enablePrimarySearch": true,
+    "searchTimeout": 15000,
+    "cacheEnabled": true,
+    "cacheDuration": 3600
+  },
+  
+  "semanticScholarConfig": {
+    "baseUrl": "https://api.example-academic-db.com/v1",
+    "rateLimit": {
+      "requestsPerMinute": 100,
+      "requestsPerHour": 5000
+    },
+    "fields": [
+      "title",
+      "abstract",
+      "authors",
+      "year",
+      "citationCount",
+      "url",
+      "venue",
+      "doi"
+    ]
+  },
+  
+  "scrapingConfig": {
+    "baseUrl": "https://api.example-scraping-service.com",
+    "googleScholarEnabled": true,
+    "timeout": 20000,
+    "retryAttempts": 2,
+    "rateLimit": {
+      "requestsPerMinute": 60,
+      "requestsPerHour": 1000
+    }
+  },
+  
+  "serverConfig": {
+    "port": 3001,
+    "host": "localhost",
+    "cors": {
+      "enabled": true,
+      "origins": ["http://localhost:3000", "https://your-domain.com"]
+    },
+    "rateLimit": {
+      "windowMs": 900000,
+      "max": 1000
+    },
+    "compression": true,
+    "helmet": true
+  },
+  
+  "loggingConfig": {
+    "enabled": true,
+    "level": "info",
+    "maxFileSize": "10MB",
+    "maxFiles": 5,
+    "retentionDays": 30,
+    "logToConsole": true,
+    "logToFile": true,
+    "logPath": "./logs"
+  },
+  
+  "securityConfig": {
+    "jwtSecret": "your-jwt-secret-here",
+    "jwtExpiresIn": "24h",
+    "bcryptRounds": 12,
+    "sessionTimeout": 3600000,
+    "maxLoginAttempts": 5,
+    "lockoutDuration": 900000
+  },
+  
+  "databaseConfig": {
+    "mongodb": {
+      "enabled": false,
+      "uri": "mongodb://localhost:27017/scholar_search",
+      "options": {
+        "useNewUrlParser": true,
+        "useUnifiedTopology": true
+      }
+    },
+    "redis": {
+      "enabled": false,
+      "host": "localhost",
+      "port": 6379,
+      "password": "",
+      "db": 0
+    }
+  },
+  
+  "emailConfig": {
+    "enabled": false,
+    "smtp": {
+      "host": "smtp.example.com",
+      "port": 587,
+      "secure": false,
+      "auth": {
+        "user": "your_email@example.com",
+        "pass": "your_email_password"
+      }
+    },
+    "from": "noreply@your-domain.com",
+    "templates": {
+      "errorNotification": "error_notification.html",
+      "dailyReport": "daily_report.html"
+    }
+  },
+  
+  "analyticsConfig": {
+    "googleAnalytics": {
+      "enabled": false,
+      "trackingId": "YOUR-GA-ID"
+    },
+    "googleTagManager": {
+      "enabled": false,
+      "containerId": "YOUR-GTM-ID"
+    },
+    "microsoftClarity": {
+      "enabled": false,
+      "projectId": "YOUR-CLARITY-ID"
+    }
+  },
+  
+  "performanceConfig": {
+    "enableCompression": true,
+    "enableCaching": true,
+    "cacheMaxAge": 3600,
+    "enableMinification": true,
+    "enableGzip": true,
+    "maxRequestSize": "50mb",
+    "requestTimeout": 30000
+  },
+  
+  "maintenanceConfig": {
+    "enabled": false,
+    "message": "系统维护中，请稍后再试",
+    "allowedIPs": ["127.0.0.1", "::1"],
+    "startTime": null,
+    "endTime": null
+  },
+  
+  "featureFlags": {
+    "enableAdvancedSearch": true,
+    "enableExport": true,
+    "enableUserAccounts": false,
+    "enableComments": false,
+    "enableRatings": false,
+    "enableNotifications": false,
+    "enableDarkMode": true,
+    "enableMultiLanguage": false
+  },
+  
+  "_notes": {
+    "aiConfig": "AI服务相关配置，包括API地址、模型参数等",
+    "searchConfig": "搜索功能配置，包括结果数量、超时时间等",
+    "semanticScholarConfig": "Semantic Scholar API配置",
+    "scrapingConfig": "爬虫服务配置，用于Google Scholar等",
+    "serverConfig": "服务器基础配置",
+    "loggingConfig": "日志系统配置",
+    "securityConfig": "安全相关配置",
+    "databaseConfig": "数据库配置（可选）",
+    "emailConfig": "邮件服务配置（可选）",
+    "analyticsConfig": "分析服务配置（可选）",
+    "performanceConfig": "性能优化配置",
+    "maintenanceConfig": "维护模式配置",
+    "featureFlags": "功能开关配置"
+  }
+}

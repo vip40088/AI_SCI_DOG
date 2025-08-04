@@ -1,0 +1,38 @@
+# Dependencies
+node_modules/
+
+# Logs
+logs
+*.log
+npm-debug.log*
+
+# Environment variables (除了示例文件)
+.env
+.env.*
+!.env.example
+!.env.production
+.env.local
+.env.development
+.env.test
+.env.dev
+.env.server
+
+# Configuration files with sensitive data
+config/api_keys.json
+config/system_settings.json
+
+# Process files
+.backend.pid
+
+# Build directory (if contains sensitive info)
+# build/
+
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# Editor directories and files
+.vscode/
+.idea/
+*.swp
+*.swo

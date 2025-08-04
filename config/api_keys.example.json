@@ -1,0 +1,24 @@
+{
+  "_comment": "API密钥配置文件 - 请复制为 api_keys.json 并填入实际密钥",
+  
+  "aiApiKey": "your_openai_api_key_here",
+  "aiBaseUrl": "https://api.example-ai-provider.com/v1",
+  "aiModel": "gpt-3.5-turbo",
+  
+  "semanticScholarKey": "your_semantic_scholar_api_key_here",
+  "semanticScholarBaseUrl": "https://api.example-academic-db.com/v1",
+  
+  "scrapingDogKey": "your_scrapingdog_api_key_here",
+  "scrapingDogBaseUrl": "https://api.example-scraping-service.com",
+  
+  "googleScholarEnabled": true,
+  "primaryScrapingEnabled": true,
+  
+  "_notes": {
+    "aiApiKey": "支持 OpenAI、DeepSeek、通义千问、文心一言等AI服务",
+    "semanticScholarKey": "Semantic Scholar API密钥，用于学术论文搜索",
+    "scrapingDogKey": "ScrapingDog API密钥，用于Google Scholar爬取",
+    "baseUrl": "各服务的API基础地址，可根据实际服务商调整",
+    "model": "AI模型名称，根据服务商支持的模型调整"
+  }
+}

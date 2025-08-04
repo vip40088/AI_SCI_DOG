@@ -721,12 +721,9 @@ app.get('/api/google-scholar/search', async (req, res) => {
       ...req.query
     };
 
-    // Google Scholar搜索API - 通过第三方爬虫服务获取学术搜索结果
-    // 可对接: ScrapingDog、SerpAPI、自建爬虫服务等
-    // 示例地址: https://api.example-scraping-service.com/google_scholar
-    const response = await axios.get('https://api.example-scraping-service.com/google_scholar', {
+    const response = await axios.get('https://api.scrapingdog.com/google_scholar', {
       params,
-      timeout: 30000,
+      timeout: 15000, // 优化超时时间，提升响应速度
       headers: {
         'User-Agent': 'Scholar-Search-Proxy/1.0'
       }

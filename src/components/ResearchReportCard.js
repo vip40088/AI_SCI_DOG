@@ -541,7 +541,7 @@ const ResearchReportCard = ({
         <TitleSection>
           <CardTitle>
             <FiTrendingUp size={18} />
-            研究报告生成器
+            AI学术总结
           </CardTitle>
           <PaperCount>{papers.length} 篇论文</PaperCount>
           {generating && (

@@ -3625,7 +3625,7 @@ const App = () => {
           </SearchStats>
         )}
 
-        {/* 研究报告生成器卡片 - 放在工具栏上方 */}
+        {/* AI学术总结卡片 - 放在工具栏上方 */}
         {searchResults.length > 0 && !loading && (
           <ResearchReportCard
             papers={searchResults}
@@ -4199,7 +4199,7 @@ const App = () => {
                   color: '#0369a1',
                   border: '1px solid #e0f2fe'
                 }}>
-                  💡 提示：如需生成研究报告，请使用页面上方的"研究报告生成器"卡片
+                  💡 提示：如需生成研究报告，请使用页面上方的"AI学术总结"卡片
                 </div>
               </BatchAnalysisOption>
             </ModalBody>
